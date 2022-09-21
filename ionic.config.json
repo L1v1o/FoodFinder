@@ -1,0 +1,7 @@
+{
+  "name": "FoodFinder",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
