@@ -1,15 +1,51 @@
 
-ion-button
+ion-toolbar{
+  --background: #119A9A;
+    color: white;
+}
+
+ion-content{
+
+#header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+   h1{
+      font-weight: 700;
+      font-size: 26px;
+      margin-bottom: 15%;
+    }
+    ion-img{
+      width: 125px;
+      height: 125px;
+      border-radius: 50%;
+    }
+  }
+#form{
+  margin-top: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  ion-button{
+    margin-top: 35px;
+    height: 48px;
+    font-size: 18px;
+    text-transform: initial;
+    border-radius: 50px;
+    box-shadow: 1px 8px 8px 0px rgba(0,0,0,0.05);
+    --box-shadow: none;
+  }
+}
+
+}
+
+.btnLog
 {
   --background: #119A9A;
 }
-
-/*#btn {
-  text-align: center;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+.btnReg
+{
+  color: #119A9A;
 }
-*/
+
+
