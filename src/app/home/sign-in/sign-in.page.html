@@ -1,0 +1,82 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Registrieren</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" offset-md="3" class="ion-text-center">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>
+              Persönliche Informationen
+            </ion-card-title>
+          </ion-card-header>
+            <ion-item>
+            <ion-input placeholder="Name"></ion-input>
+            <ion-input placeholder="Vorname"></ion-input>
+          </ion-item>
+          <br>
+          <ion-item>
+              <ion-label>Geburtsdatum</ion-label>
+              <ion-datetime-button slot="end" datetime="date"></ion-datetime-button>
+        </ion-item>
+        <br>
+        <ion-item>
+          <ion-input placeholder="Benutzername"></ion-input>
+        </ion-item>
+        </ion-card>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Adresse</ion-card-title>
+          </ion-card-header>
+          <ion-item>
+          <ion-input placeholder="Strasse"></ion-input>
+          <ion-input placeholder="Hausnummer"></ion-input>
+        </ion-item>
+        <br>
+        <ion-item>
+          <ion-input placeholder="Stadt"></ion-input>
+          <ion-input placeholder="PLZ"></ion-input>
+        </ion-item>
+        </ion-card>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Sicherheit</ion-card-title>
+          </ion-card-header>
+          <ion-item>
+            <ion-input placeholder="E-Mail"></ion-input>
+          </ion-item>
+          <br>
+          <ion-item>
+            <ion-input type="password" placeholder="Passwort"></ion-input>
+            <ion-input type="password" placeholder="Passwort bestätigen"></ion-input>
+          </ion-item>
+          <br>
+          <ion-item>
+            <ion-input placeholder="Telefon"></ion-input>
+          </ion-item>
+        </ion-card>
+        <ion-button color="primary">Jetzt registrieren</ion-button>
+
+    </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-modal [keepContentsMounted]="true">
+    <ng-template>
+      <ion-datetime
+        id="date"
+        presentation="date"
+        [preferWheel]="true"
+        [showDefaultButtons]="true"
+        doneText="All set"
+        cancelText="Nevermind">
+      </ion-datetime>
+    </ng-template>
+  </ion-modal>
+
+</ion-content>
