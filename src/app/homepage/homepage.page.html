@@ -1,13 +1,24 @@
 
   <ion-header>
   <ion-toolbar color="danger">
-    <div class="Searchbar">
-      <div class="InputField">
-      <form>
-        <input type="text" id="fname" name="fname" placeholder="Search...">
-      </form>
+    <br>
+    <div class="Searchbar"></div>
+    <div class="logo" slot="start">
+      <br>
+      <a href="http://localhost:8100/homepage">
+    <ion-img src="../../assets/Logo_mit_Schrift.svg"></ion-img>
+      </a>
     </div>
-    </div>
+        <ion-searchbar animated="true" placeholder="Suche..."></ion-searchbar>
+    <ion-list>
+      <ion-item color ="danger">
+        <ion-select placeholder="Filter" [multiple]="true">
+          <ion-select-option value="Burger">Burger</ion-select-option>
+          <ion-select-option value="Sushi">Sushi</ion-select-option>
+          <ion-select-option value="Süss">Süss</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
   </ion-toolbar>
 </ion-header>
 
