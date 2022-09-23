@@ -25,7 +25,11 @@ const routes: Routes = [
 
     loadChildren: () => import('./homepage/homepage-routing.module').then( m => m.HomepagePageRoutingModule)
 
+  },  {
+    path: 'rest-detail',
+    loadChildren: () => import('./rest-detail/rest-detail.module').then( m => m.RestDetailPageModule)
   },
+
 
 ];
 
