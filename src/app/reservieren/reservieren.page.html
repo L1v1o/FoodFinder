@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-toolbar color="danger">
+    <br>
+    <div class="Searchbar"></div>
+    <div class="logo" slot="start">
+      <br>
+      <a href="http://localhost:8100/homepage">
+        <ion-img src="../../assets/Logo_mit_Schrift.svg"></ion-img>
+      </a>
+    </div>
+    <ion-searchbar animated="true" placeholder="Suche..."></ion-searchbar>
+    <ion-list>
+      <ion-item color ="danger">
+        <ion-select placeholder="Filter" [multiple]="true">
+          <ion-select-option value="Burger">Burger</ion-select-option>
+          <ion-select-option value="Sushi">Japanisch</ion-select-option>
+          <ion-select-option value="Süss">Süss</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<ion-grid>
+  <ion-row>
+    <ion-col size-md="6" offset-md="3" class="ion-text-center">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>
+            Reservieren
+          </ion-card-title>
+        </ion-card-header>
+        <ion-item>
+          <ion-label>Uhrzeit:</ion-label>
+          <ion-input type="time"></ion-input>
+        </ion-item>
+        <br>
+        <ion-item>
+          <ion-label>Datum:</ion-label>
+          <ion-datetime-button slot="end" datetime="date"></ion-datetime-button>
+        </ion-item>
+        <br>
+        <ion-item>
+          <ion-input placeholder="Anzahl Leute" type="number"></ion-input>
+        </ion-item>
+        <br>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>
+            Authentifizierung
+          </ion-card-title>
+        </ion-card-header>
+        <ion-item>
+          <ion-select placeholder="Authentifizierung">
+            <ion-select-option value="Identitätskarte">Identitätskarte</ion-select-option>
+            <ion-select-option value="Führerausweis">Führerausweis</ion-select-option>
+            <ion-select-option value="Pass">Pass</ion-select-option>
+          </ion-select>
+          </ion-item>
+          <br>
+          <ion-grid>
+            <ion-row>
+              <ion-col size-md="6" offset-md="3">
+                <app-image-picker (imagePick)="onImagePicked($event)"></app-image-picker>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<ion-modal [keepContentsMounted]="true">
+  <ng-template>
+    <ion-datetime
+      id="date"
+      presentation="date"
+      [preferWheel]="true"
+      [showDefaultButtons]="true"
+      doneText="All set"
+      cancelText="Nevermind">
+    </ion-datetime>
+  </ng-template>
+</ion-modal>
+</ion-content>

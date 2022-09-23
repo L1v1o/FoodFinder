@@ -1,12 +1,14 @@
 <ion-header>
   <ion-toolbar color="danger">
-    <div class="Searchbar">
-      <div class="InputField">
-      <form>
-        <input type="text" id="fname" name="fname" placeholder="Search...">
-      </form>
+    <br>
+    <div class="Searchbar"></div>
+    <div class="logo" slot="start">
+      <br>
+      <a href="http://localhost:8100/homepage">
+        <ion-img src="../../assets/Logo_mit_Schrift.svg"></ion-img>
+      </a>
     </div>
-    </div>
+    <ion-searchbar animated="true" placeholder="Suche..."></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
@@ -36,7 +38,9 @@
           <ion-img class="center" src="assets\mae-mu-I7A_pHLcQK8-unsplash.jpg"></ion-img>
         </ion-item>
           <ion-item>
-          <ion-button color="primary" class="center" size="200px" routerLink="reservieren">Jetzt Reservieren</ion-button>
+            <a href="http://localhost:8100/reservation">
+          <ion-button color="primary" class="center" size="200px">Jetzt Reservieren</ion-button>
+            </a>
         </ion-item>
         </ion-card>
 
