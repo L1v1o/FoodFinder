@@ -1,0 +1,51 @@
+
+<ion-header>
+  <ion-toolbar color="danger">
+    <br>
+    <div class="Searchbar"></div>
+    <div class="logo" slot="start">
+      <br>
+      <a href="http://localhost:8100/homepage">
+        <ion-img src="../../assets/Logo_mit_Schrift.svg"></ion-img>
+      </a>
+    </div>
+    <ion-searchbar animated="true" placeholder="Suche..."></ion-searchbar>
+    <ion-list>
+      <ion-item color ="danger">
+        <ion-select placeholder="Filter" [multiple]="true">
+          <ion-select-option value="Burger">Burger</ion-select-option>
+          <ion-select-option value="Sushi">Sushi</ion-select-option>
+          <ion-select-option value="Süss">Süss</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" offset-md="3" class="ion-text-center">
+        <ion-tab-bar>Livio's Burger</ion-tab-bar>
+        <ion-tab-bar>Träger's Konditorei</ion-tab-bar>
+        <ion-tab-bar>Yeezy Steaks</ion-tab-bar>
+        <div class="favorites">
+          <a href="http://localhost:8100/homepage/favourites">
+            <ion-button mode="md" routerLink="favourites" style="width: 185px" color="danger" >
+              <ion-icon name="heart"></ion-icon>
+            </ion-button>
+          </a>
+        </div>
+        <div class="History">
+          <a href="http://localhost:8100/homepage/history">
+          <ion-button routerLink="favourites" mode="md" style="width: 185px" color="danger">
+            <ion-icon name="Book" ></ion-icon>
+          </ion-button>
+          </a>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

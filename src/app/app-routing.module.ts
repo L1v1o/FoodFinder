@@ -28,6 +28,22 @@ const routes: Routes = [
 
   },
 
+  {
+
+    path: 'favourites',
+
+    loadChildren: () => import('./homepage/favourites/favourites-routing.module').then( m => m.FavouritesPageRoutingModule)
+
+  },
+
+  {
+
+    path: 'history',
+
+    loadChildren: () => import('./homepage/history/history-routing.module').then( m => m.HistoryPageRoutingModule)
+
+  },
+
 ];
 
 @NgModule({

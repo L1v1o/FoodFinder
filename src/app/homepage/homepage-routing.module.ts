@@ -7,7 +7,15 @@ const routes: Routes = [
   {
     path: '',
     component: HomepagePage
+  },  {
+    path: 'favourites',
+    loadChildren: () => import('./favourites/favourites.module').then( m => m.FavouritesPageModule)
   },
+  {
+    path: 'history',
+    loadChildren: () => import('./history/history.module').then( m => m.HistoryPageModule)
+  },
+
 
 ];
 
