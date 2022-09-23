@@ -1,5 +1,7 @@
+
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import {AuthGuard} from './home/auth.guard';
 
 const routes: Routes = [
   {
@@ -25,11 +27,23 @@ const routes: Routes = [
 
     loadChildren: () => import('./homepage/homepage-routing.module').then( m => m.HomepagePageRoutingModule)
 
-  },  {
-    path: 'rest-detail',
-    loadChildren: () => import('./rest-detail/rest-detail.module').then( m => m.RestDetailPageModule)
   },
 
+  {
+
+    path: 'favourites',
+
+    loadChildren: () => import('./homepage/favourites/favourites-routing.module').then( m => m.FavouritesPageRoutingModule)
+
+  },
+
+  {
+
+    path: 'history',
+
+    loadChildren: () => import('./homepage/history/history-routing.module').then( m => m.HistoryPageRoutingModule)
+
+  },
 
 ];
 
